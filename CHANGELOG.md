@@ -12,6 +12,10 @@ version in [`docs/changelog/`](docs/changelog/):
 ## [Unreleased]
 
 ### Fixed
+- Routed the OpenCode provider's `claude-haiku-5-5` model to Anthropic
+  Messages instead of falling through to ChatCompletions, which made every
+  call fail with a 400 `ModelProtocolUnsupported` error.
+  ([#1470](https://github.com/akitaonrails/ai-memory/issues/1470))
 - Ignored a UTF-8 byte-order mark at the start of `run --env-file` input so
   the first environment variable keeps its intended name.
   ([#1465](https://github.com/akitaonrails/ai-memory/pull/1465))

@@ -319,6 +319,7 @@ const ANTHROPIC_MESSAGES_MODELS: &[&str] = &[
     "claude-sonnet-4-5",
     "claude-sonnet-4",
     "claude-haiku-4-5",
+    "claude-haiku-5-5",
     "qwen3.8-flash",
     "qwen3.7-max",
     "qwen3.7-plus",
@@ -672,6 +673,11 @@ mod tests {
                 OpenCodeApi::Responses,
             ),
             ("gpt-6-luna", OpenCodeApi::Responses, OpenCodeApi::Responses),
+            (
+                "claude-haiku-5-5",
+                OpenCodeApi::AnthropicMessages,
+                OpenCodeApi::AnthropicMessages,
+            ),
             (
                 "qwen3.8-flash",
                 OpenCodeApi::AnthropicMessages,
